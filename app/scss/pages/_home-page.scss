@@ -184,3 +184,105 @@
 .direct-ill {
   margin: 0 70px;
 }
+
+.fund-section {
+  position: relative;
+  padding-top: 210px;
+}
+
+.foundation {
+  background-color: #f3f3f3;
+  padding: 50px;
+  max-width: 1130px;
+  width: 100%;
+  .headline {
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__items {
+    background: $white;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 50px;
+    max-width: 363px;
+    width: 100%;
+    flex: 1 1 363px;
+    margin: 0 10px 20px;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition;
+    @include hover () {
+      box-shadow: 0 2px 50px rgba(0, 0, 0, 0.5)
+    }
+  }
+}
+
+.intell-section {
+  padding: 100px 0;
+  text-align: center;
+  .headline {
+    margin-bottom: 70px;
+  }
+}
+
+.intell-title {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 56px;
+}
+
+.intell-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 -58px;
+}
+
+.intell-items {
+  text-align: left;
+  color: #7f8c8d;
+  max-width: 470px;
+  flex: 1 1 470px;
+  width: 100%;
+  margin: 0 58px 42px;
+}
+
+.intell-number {
+  height: 31px;
+  width: 31px;
+  background-color: $steel;
+  border-radius: 5px;
+  color: $main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rules-list {}
+
+.rules-items {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  &:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 4px;
+    border-radius: 5px;
+    background-color: $gray;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+}
