@@ -286,3 +286,125 @@
     left: 0;
   }
 }
+
+.project-invest {
+  background-color: $cinder;
+  padding: 100px 0 90px;
+  .headline {
+    margin: 0 0 80px;
+  }
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  &__items {
+    background-color: $steel;
+    border-radius: 5px;
+    padding: 10px 30px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #7f8c8d;
+    max-width: 267px;
+    width: 100%;
+    flex: 0 0 calc(25% - 20px);
+    height: 77px;
+    margin: 0 10px 20px;
+    p {
+      margin: 0;
+    }
+  }
+  &__icon {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+}
+
+.research {
+  .headline {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto 50px;
+  }
+}
+
+.research-list {
+  max-width: 745px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.research-items {
+  margin-bottom: 40px;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.research-descr {
+  color: #7f8c8d;
+  text-align: left;
+  position: relative;
+  padding-left: 26px;
+  &:after {
+    content: '';
+    display: block;
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: $main;
+    box-shadow: 0 0 10px rgba(0, 227, 241, 0.501387);
+  }
+  p {
+    margin: 0 0 10px;
+  }
+}
+
+.research-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $main;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: left;
+  position: relative;
+  padding-left: 45px;
+  @include transition;
+  @include hover () {
+    text-decoration: underline;
+    &:after {
+      transform: translate(10px, 0);
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    background-image: url(../img/research-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    transform: translate(0, 0);
+    @include transition;
+  }
+}
+
+.subscribe {
+  padding: 100px 0;
+  &__container {
+    .headline {
+      margin-bottom: 80px;
+    }
+  }
+}

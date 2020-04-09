@@ -27,5 +27,3 @@ $('.back-to-top').on('click', function() {
   return false;
 })
 
-// Init Malihu plugin
-$('.scroll-text').mCustomScrollbar();

@@ -81,48 +81,85 @@
       transform: translate(0, 0);
     }
   }
+  &--noline {
+    &:after {
+      display: none;
+    }
+  }
 }
 
 // Form styles 
-.form__control{
+.form {}
+
+.form-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-row {
+  margin-right: 20px;
+  max-width: 490px;
+  width: 100%;
+}
+
+.form-control{
   font-family: "Ubuntu", OpenSans, sans-serif;
   display: inline-block;
   vertical-align: top;
   width: 100%;
   height: 50px;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 300;
   padding: 14px 20px;
-  color: #000;
-  background-color: $white;
+  color: #7f8c8d;
+  background-color: #f3f3f3;
   border: none;
   outline: none;
   resize: none;
-  border: 1px solid #E0E6ED;
-  border-radius: 5px;
+  border: 1px solid transparent;
+  border-radius: 50px;
   margin: 0;
   transition: all .2s;
-  text-align: center;
+  text-align: left;
   &:focus {
-    border: 1px solid gold;
+    border: 1px solid $main;
   }
 }
 *::-webkit-input-placeholder {
   opacity: 1;
-  color: #c7c7c7; 
+  color: #7f8c8d; 
 }
 *:-moz-placeholder {
   opacity: 1;
-  color: #c7c7c7; 
+  color: #7f8c8d; 
 }
 *::-moz-placeholder {
   opacity: 1;
-  color: #c7c7c7; 
+  color: #7f8c8d; 
 }
 *:-ms-input-placeholder {
   opacity: 1;
-  color: #c7c7c7; 
+  color: #7f8c8d; 
+}
+
+.form-btn {
+  max-width: 200px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+  background-color: $main;
+  padding: 14px;
+  border-radius: 50px;
+  outline: none;
+  border: 2px solid $main;
+  @include transition;
+  @include hover () {
+    background-color: transparent;
+    color: $main;
+  }
 }
 
 //Hide elem 
