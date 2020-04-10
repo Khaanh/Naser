@@ -726,6 +726,50 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  &--id1 {
+    .chart-percent {
+      color: $main;
+    }
+    .chart-control {
+      &:after {
+        background-color: $main;
+        width: 70%;
+      }
+    }
+  }
+  &--id2 {
+    .chart-percent {
+      color: #089fac;
+    }
+    .chart-control {
+      &:after {
+        background-color: #089fac;
+        width: 13%;
+      }
+    }
+  }
+  &--id3 {
+    .chart-percent {
+      color: #0f5b66;
+    }
+    .chart-control {
+      &:after {
+        background-color: #0f5b66;
+        width: 10%;
+      }
+    }
+  }
+  &--id4 {
+    .chart-percent {
+      color: $cinder;
+    }
+    .chart-control {
+      &:after {
+        background-color: $cinder;
+        width: 7%;
+      }
+    }
+  }
 }
 
 .chart-percent {
@@ -744,6 +788,15 @@
   background: #f1f1f1;
   border-radius: 100px;
   height: 20px;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 50px;
+    @include transition;
+  }
 }
 
 
@@ -751,4 +804,135 @@
 .model {
   padding: 245px 0px;
   background-color: $cinder;
+}
+
+
+.stages {
+  padding: 100px 0;
+  background-color: $steel;
+  .container {
+    margin-left: 200px;
+  }
+}
+
+.stages-holder {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 174px;
+  &:last-child {
+    margin-bottom: 0;
+    .stages-descr {
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.stages-step {
+  font-size: 20px;
+  line-height: 25px;
+  color: $main;
+  margin-right: 70px;
+  flex: 0 0 172px;
+}
+
+.stages-descr {
+  text-align: left;
+  max-width: 640px;
+  width: 100%;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: $main;
+    box-shadow: 0 0px 10px rgba(0, 227, 241, 0.501387);
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+  }
+  &:before {
+    content: '';
+    display: block;
+    background-image: url(../img/line-dash.png);
+    width: 2px;
+    height: 131px;
+    position: absolute;
+    bottom: -136px;
+    left: 5px;
+  }
+}
+
+.stages-head {
+  font-size: 20px;
+  line-height: 25px;
+  color: $white;
+  margin-bottom: 15px;
+}
+
+.info-section {
+  background-image: url(../img/bg-map.png);
+  background-color: $cinder;
+  padding: 100px 0 60px;
+}
+
+.info-list {
+  margin-bottom: 48px;
+}
+
+.info-items {
+  text-align: left;
+  background-color: $steel;
+  border-radius: 5px;
+  width: 100%;
+  padding: 40px 76px;
+  margin-bottom: 10px;
+}
+
+.info-head {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  color: $main;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.info-meta {
+  font-weight: 500;
+  color: $white;
+}
+
+.info-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: $main;
+  @include hover () {
+    text-decoration: none;
+  }
+}
+.info-btn {
+  border: 2px solid $main;
+  border-radius: 50px;
+  width: 100px;
+  min-width: 220px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 21px;
+  color: $main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-decoration: none;
+  background-color: transparent;
+  @include transition;
+  @include hover () {
+    background-color: $main;
+    color: $white;
+  }
 }
