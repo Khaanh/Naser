@@ -24,7 +24,7 @@
   max-width: 1160px;
   width: 100%;
   padding: 0 10px;
-	color: $black;
+	color: $txt;
 	margin: 0 auto;
 }
 
@@ -63,7 +63,7 @@
     width: 150px;
     background-color: $main;
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     left: 50%;
     transform: translate(-50%, 0);
   }
