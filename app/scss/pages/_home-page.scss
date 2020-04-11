@@ -915,6 +915,7 @@
     text-decoration: none;
   }
 }
+
 .info-btn {
   border: 2px solid $main;
   border-radius: 50px;
@@ -934,5 +935,112 @@
   @include hover () {
     background-color: $main;
     color: $white;
+  }
+}
+
+.team {
+  padding: 100px 0 227px;
+  .headline {
+    margin-bottom: 120px;
+  }
+}
+
+
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 -11px;
+}
+
+.members-items {
+  max-width: 265px;
+  width: 100%;
+  flex: 0 0 25%;
+  margin: 0 11px 88px;
+  background: $white;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition;
+  @include hover () {
+    background-color: $main;
+    .members-details {
+      z-index: 30;
+      @include show-elem;
+    }
+    .members-info {
+      @include hide-elem;
+    }
+  }
+}
+
+.members-inner {}
+
+.members-holder {
+  padding: 55px 20px 14px;
+  position: relative;
+  height: 155px;
+}
+
+.members-widget {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transform: translate(0, -50%);
+}
+
+.members-ava {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.members-link {
+  display: inline-block;
+  text-decoration: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: $steel;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.members-info {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  @include transition;
+}
+
+.members-name {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 300;
+  color: $black;
+  margin-bottom: 8px;
+}
+
+.members-details {
+  font-size: 20px;
+  line-height: 25px;
+  color: $black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include transition;
+  @include hide-elem;
+  p {
+    margin: 0;
   }
 }
