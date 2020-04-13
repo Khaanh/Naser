@@ -537,6 +537,7 @@
 
 .map-project {
   background-color: $steel;
+  background-attachment: fixed;
   padding: 100px 0 0;
   .headline {
     margin-bottom: 100px;
@@ -549,7 +550,6 @@
   background-position: center 10px;
   padding-bottom: 130px;
 }
-
 
 .map-items {
   display: flex;
@@ -628,7 +628,6 @@
 
 .details {
   padding: 100px 0 274px;
-  // padding: 100px 0 0;
   position: relative;
   .headline {
     margin-bottom: 70px;
@@ -661,9 +660,9 @@
 }
 
 .details-diagram {
-  width: 221px;
-  height: 221px;
-  flex: 0 0 221px;
+  width: 220px;
+  height: 220px;
+  flex: 0 0 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -671,32 +670,16 @@
   margin-right: 114px;
 }
 
-.circuit {
-  border: 15px solid #f1f1f1;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
-  &--id-1 {
-    width: 79px;
-    height: 79px;
-  }
-  &--id-2 {
-    width: 127px;
-    height: 127px;
-  }
-  &--id-3 {
-    width: 173px;
-    height: 173px;
-  }
-  &--id-4 {
-    height: 100%;
-    width: 100%;
-  }
-}
+// .circuit {
+//   border: 15px solid #f1f1f1;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   height: 100%;
+//   width: 100%;
+// }
 
 .details-layout {
   width: 100%;
@@ -733,9 +716,11 @@
       color: $main;
     }
     .chart-control {
-      &:after {
-        background-color: $main;
-        width: 70%;
+      &.active {
+        &:after {
+          background-color: $main;
+          width: 70%;
+        }
       }
     }
   }
@@ -744,9 +729,11 @@
       color: #089fac;
     }
     .chart-control {
-      &:after {
-        background-color: #089fac;
-        width: 13%;
+      &.active {
+        &:after {
+          background-color: #089fac;
+          width: 13%;
+        }
       }
     }
   }
@@ -755,9 +742,11 @@
       color: #0f5b66;
     }
     .chart-control {
-      &:after {
-        background-color: #0f5b66;
-        width: 10%;
+      &.active {
+        &:after {
+          background-color: #0f5b66;
+          width: 10%;
+        }
       }
     }
   }
@@ -766,9 +755,11 @@
       color: $cinder;
     }
     .chart-control {
-      &:after {
-        background-color: $cinder;
-        width: 7%;
+      &.active {
+        &:after {
+          background-color: $cinder;
+          width: 7%;
+        }
       }
     }
   }
@@ -795,9 +786,10 @@
   &:after {
     content: '';
     display: block;
+    width: 0%;
     height: 100%;
     border-radius: 50px;
-    @include transition;
+    transition: width 0.7s ease-in-out;
   }
 }
 

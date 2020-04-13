@@ -89,18 +89,62 @@
 }
 
 // Form styles 
-.form {}
+.form {
+  &--registr {
+    text-align: center;
+    .headline {
+      margin: 0 0 18px;
+    }
+  }
+}
+
+.form-intro {
+  color: $txt;
+  text-align: center;
+  margin-bottom: 48px;
+  p {
+    margin: 0;
+    a {
+      color: $main;
+      display: inline-block;
+      @include hover () {
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 .form-holder {
   display: flex;
   align-items: center;
   justify-content: center;
+  &--registr {
+    flex-direction: column;
+  }
 }
 
 .form-row {
   margin-right: 20px;
   max-width: 490px;
   width: 100%;
+  position: relative;
+  &--registr {
+    max-width: 280px;
+    margin: 0 0 14px;
+    &:last-child {
+      margin: 0 0 18px;
+    }
+    span {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      color: #919597;
+      position: absolute;
+      left: 0;
+      bottom: 11px;
+      @include transition;
+    }
+  }
 }
 
 .form-control{
@@ -125,6 +169,23 @@
   text-align: left;
   &:focus {
     border: 1px solid $main;
+  }
+  &--registr {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #a2a6a8;
+    border-radius: 0;
+    padding: 10px 8px 10px 0;
+    height: 46px;
+    font-size: 18px;
+    line-height: 25px;
+    &:focus {
+      border: none;
+      border-bottom: 2px solid $main;
+      & + span {
+        color: $main;
+      }
+    }
   }
 }
 *::-webkit-input-placeholder {
@@ -159,6 +220,77 @@
   @include hover () {
     background-color: transparent;
     color: $main;
+  }
+  &--registr {
+    max-width: 305px;
+    font-size: 18px;
+    line-height: 21px;
+    color: $black;
+    padding: 12px;
+    font-weight: 300;
+  }
+}
+
+.link-help {
+  font-size: 10px;
+  line-height: 16px;
+  color: $txt;
+  display: inline-block;
+  margin-bottom: 20px;
+  @include transition;
+  @include hover () {
+    text-decoration: none;
+    color: $main;
+  }
+}
+
+.checkbox-section {
+  text-align: center;
+  margin-bottom: 36px;
+  .checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 10px;
+    line-height: 16px;
+    color: $txt;
+    input[type=checkbox],
+    input[type=radio] {
+      &:checked ~ .checkmark {
+        svg {
+          @include show-elem;
+        }
+      }
+    }
+    p {
+      margin: 0;
+      a {
+        color: $txt;
+        @include hover () {
+          text-decoration: none;
+          color: $main;
+        }
+      }
+    }
+  }
+  .checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    border: 1px solid $main;
+    background-color: transparent;
+    margin-right: 22px;
+    svg {
+      display: flex;
+      transform: rotate(-90deg) translate(-3px, 0);
+      @include hide-elem;
+      @include transition;
+    }
   }
 }
 

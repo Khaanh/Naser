@@ -47,6 +47,11 @@
     border-bottom: none;
     position: relative;
   }
+  &--registr {
+    width: 100%;
+    padding: 26px 20px;
+    background: rgba(23, 23, 33, 0.8);
+  }
 }
 
 .modal-header {
