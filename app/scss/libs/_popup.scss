@@ -50,7 +50,7 @@
   &--registr {
     width: 100%;
     padding: 26px 20px;
-    background: rgba(23, 23, 33, 0.8);
+    background: rgba(23, 23, 33, 0.9);
   }
 }
 
@@ -121,6 +121,22 @@
   > svg {
     opacity: 0.7;
     transition: 0.3s ease-in-out;
+  }
+  &--registr {
+    background-color: transparent;
+    background: transparent;
+    transform: translate(0, 0);
+    @include hover () {
+      background-color: transparent;
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+    &:after {
+      background-image: url(../img/close-registr.svg);
+      transform: rotate(0);
+      @include transition;
+    }
   }
 }
 
