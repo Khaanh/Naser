@@ -1,6 +1,7 @@
 $(function() {
 	//= include/default
 	//= include/popup
+  //= include/progressbar
 
   $('.js-form-registr').on('focus', function() {
     $(this).parent().addClass('active')
@@ -11,6 +12,7 @@ $(function() {
       $(this).parent().removeClass('active')
     }
   })
+
 });
 
 
