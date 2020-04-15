@@ -37,6 +37,11 @@
           @include show-elem;
           transform: translate(-50%, 0);
         }
+        a {
+          &:after {
+            max-width: 100%;
+          }
+        }
       }
       &:before {
         content: '';
@@ -73,11 +78,6 @@
           max-width: 0;
           transition: max-width 0.7s;
           color: $main;
-        }
-        @include hover () {
-          &:after {
-            max-width: 100%;
-          }
         }
       }
     }

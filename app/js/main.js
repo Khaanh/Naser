@@ -1,6 +1,7 @@
 $(function() {
 	//= include/default
 	//= include/popup
+  //= include/animation
   //= include/progressbar
 
   $('.js-form-registr').on('focus', function() {
