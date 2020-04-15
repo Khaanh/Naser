@@ -64,11 +64,15 @@
   width: 100%;
   margin: 0 auto;
   padding: 34px 142px;
-  transform: translateY(-50%);
+  // animation-delay: 0.3s;
+  // transform: translateY(-50%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  &.wow.fadeInUp {
+    // transform: translateY(-50%);
+  }
 }
 
 .expl-block {
@@ -670,30 +674,6 @@
   margin-right: 114px;
 }
 
-// .progress-circ {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%) rotate(180deg);
-//   height: 220px;
-//   width: 220px;
-  // &--lg {
-  //   height: 220px;
-  //   width: 220px;
-  // }
-  // &--md {
-  //   height: 174px;
-  //   width: 174px;
-  // }
-  // &--sm {
-  //   height: 126px;
-  //   width: 126px;
-  // }
-  // &--xs {
-  //   height: 80px;
-  //   width: 80px;
-  // }
-// }
 
 
 .details-layout {
@@ -1132,6 +1112,7 @@
 .info-section {
   background-image: url(../img/bg-map.png);
   background-color: $cinder;
+  background-attachment: fixed;
   padding: 100px 0 60px;
 }
 
