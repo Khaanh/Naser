@@ -14,6 +14,61 @@ $(function() {
     }
   })
 
+  // Scroll Animate btn
+
+  function btnLightn() {
+    let btnLight = $('.info-btn'),
+    height = btnLight.offset().top + btnLight.height() + 100;
+    if ($(document).scrollTop() + windowHeight >= height) {
+      btnLight.addClass('active')
+    }
+  }
+
+  function stageLight() {
+    $('.stages-descr').each(function() {
+      let $this = $(this),
+      height = $this.offset().top + $this.height() + 100;
+      if ($(document).scrollTop() + windowHeight >= height) {
+        $this.addClass('active')
+      }
+    })
+  }
+
+  function mapLight() {
+    $('.map-indicator').each(function() {
+      let $this = $(this),
+      height = $this.offset().top + $this.height() + 115;
+      if ($(document).scrollTop() + windowHeight >= height) {
+        $this.addClass('active')
+      }
+    })
+  }
+
+  const windowHeight = $(window).height();
+  $(document).on('scroll', function() {
+    btnLightn();
+    stageLight();
+    mapLight();
+  });
+
+  // Following Scroll
+  $('.nav-menu > ul > li > a').on( 'click', function(){ 
+    let link = $(this);
+    let dest = link.attr('href'); 
+    if(dest !== undefined && dest !== '') {
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 86
+      }, 1000);
+    }
+    return false;
+  });
+
+  $(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+  })
+
 });
+
+
 
 

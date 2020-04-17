@@ -5,17 +5,21 @@
 	top: 0;
 	width: 100%;
 	z-index: 998;
-	@include transition;
+  height: 105px;
   background-color: $black;
+	@include transition;
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 105px;
     padding: 10px;
     max-width: 1328px;
+    height: 100%;
   }
-  &.active {}
+  &.active {
+    height: 86px;
+    border-bottom: 1px solid rgba(0, 227, 241, 0.4);
+  }
 }
 
 .logo {
@@ -185,9 +189,9 @@
   line-height: 18px;
   color: $main;
   padding: 15px 12px;
+  box-shadow: 0 0 0;
   @include transition;
   @include hover () {
-    background-color: $main;
-    color: $white
+    box-shadow: 0 0px 20px rgba(0, 227, 241, 0.501387);
   }
 }
