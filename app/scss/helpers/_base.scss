@@ -57,6 +57,18 @@
   color: $white;
   position: relative;
   text-align: center;
+  @include media(1024px) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  @include media(768px) {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  @include media (479px) {
+    font-size: 28px;
+    line-height: 32px;
+  }
   &:after {
     content: '';
     display: block;
@@ -75,6 +87,10 @@
   &--md {
     font-size: 25px;
     line-height: 38px;
+    @include media (479px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
   &--left {
     text-align: left;
@@ -120,6 +136,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include media(768px) {
+    flex-direction: column;
+  }
   &--registr {
     flex-direction: column;
   }
@@ -130,6 +149,9 @@
   max-width: 490px;
   width: 100%;
   position: relative;
+  @include media(768px) {
+    margin: 0 0 22px;
+  }
   &--registr {
     max-width: 280px;
     margin: 0 0 14px;
