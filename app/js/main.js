@@ -86,9 +86,9 @@ $(function() {
     return false;
   });
 
-  $(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-  })
+  // $(window).on('beforeunload', function() {
+  //   $(window).scrollTop(0);
+  // })
 
   // Mobile menu
   $('.js-burger').on('click', function() {

@@ -5,7 +5,11 @@
   background-color: #000;
   background-attachment: fixed;
   padding: 56px 0 245px;
+  @include media(1200px) {
+    // padding: 56px 0 200px;
+  }
 }
+
 
 .intro-project {
   background-color: rgba(23, 23, 33, 0.8);
@@ -17,18 +21,31 @@
   width: 100%;
   margin: 0 auto;
   padding: 74px 97px 70px;
+  @include media(1200px) {
+    padding: 54px 75px;
+  }
+  @include media(768px) {
+    padding: 50px 22px;
+  }
   .headline {
     margin: 0 0 72px;
+    @include media(768px) {
+      margin: 0 0 60px;
+    }
   }
   h3 {
     font-size: 20px;
     line-height: 25px;
     color: $white;
     text-align: left;
-  }
-  p {
-    font-size: 16px;
-    line-height: 25px;
+    @include media(768px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include media(479px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   ul {
     margin-bottom: 42px;
@@ -55,6 +72,12 @@
   position: relative;
   padding-bottom: 100px;
   background-color: $white;
+  @include media(1024px) {
+    padding-bottom: 74px;
+  }
+  @include media(768px) {
+    padding-bottom: 44px;
+  }
 }
 
 .expl-info {
@@ -65,14 +88,23 @@
   width: 100%;
   margin: 0 auto;
   padding: 34px 142px;
-  // animation-delay: 0.3s;
-  // transform: translateY(-50%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  &.wow.fadeInUp {
-    // transform: translateY(-50%);
+  @include media(1024px) {
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 28px 54px;
+  }
+  @include media(768px) {
+    padding: 30px 10px;
+  }
+  .headline {
+    @include media(768px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -101,6 +133,18 @@
   align-items: center;
   text-align: left;
   overflow: hidden;
+  @include media(1024px) {
+    flex-direction: column;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  @include media(768px) {
+    max-width: 100%;
+    text-align: left;
+  }
   &:last-child {
     padding-bottom: 0;
     .expl-items__icon {
@@ -116,6 +160,9 @@
     width: 70px;
     margin-right: 75px;
     position: relative;
+    @include media(1024px) {
+      margin: 0 0 20px;
+    }
     &:after,
     &:before {
       content: '';
@@ -125,6 +172,9 @@
       height: 200px;
       background-color: $main;
       left: 35px;
+      @include media(1024px) {
+        display: none;
+      }
     }
     &:before {
       bottom: 70px;
@@ -152,10 +202,19 @@
   background-color: $steel;
   color: #7f8c8d;
   padding: 94px 0;
+  @include media(1024px) {
+    padding: 64px 0;
+  }
+  @include media(768px) {
+    padding: 44px 0;
+  }
   &:nth-child(odd) {
     background-color: $cinder;
     .direct-row__container {
-      flex-direction: row-reverse
+      flex-direction: row-reverse;
+      @include media(1024px) {
+        flex-direction: column-reverse;
+      }
     }
   }
   &__container {
@@ -163,6 +222,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    @include media(1024px) {
+      flex-direction: column-reverse;
+    }
   }
   &--start {
     .direct-row__container {
@@ -170,6 +232,9 @@
     }
     .direct-descr {
       margin: 0 70px 0 0;
+      @include media(1024px) {
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -179,22 +244,39 @@
   width: 100%;
   color: #7f8c8d;
   margin: 0 70px;
+  @include media(1024px) {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
   strong {
     font-size: 20px;
     line-height: 25px;
     color: $white;
     opacity: 0.8;
+    @include media(1024px) {
+      margin-bottom: 16px;
+    }
   }
 }
 
 .direct-ill {
   margin: 0 70px;
+  @include media(1024px) {
+    margin: 0 auto 45px;
+  }
 }
 
 .fund-section {
   position: relative;
   padding-top: 210px;
   background-color: $white;
+  .container {
+    @include media(768px) {
+      padding: 0;
+    }
+  }
 }
 
 .foundation {
@@ -202,6 +284,9 @@
   padding: 50px;
   max-width: 1130px;
   width: 100%;
+  @include media (768px) {
+    padding: 50px 10px;
+  }
   .headline {
     margin-bottom: 50px;
   }
@@ -219,7 +304,7 @@
     padding: 22px 20px;
     max-width: 363px;
     width: 100%;
-    flex: 1 1 363px;
+    flex: 1 1 calc(50% - 20px);
     margin: 0 10px 20px;
     min-height: 140px;
     height: 100%;
@@ -229,6 +314,11 @@
     @include transition;
     @include hover () {
       box-shadow: 0 2px 50px rgba(0, 0, 0, 0.5)
+    }
+    @include media (768px) {
+      flex: 1 1 auto;
+      max-width: 100%;
+      margin: 0 auto 20px;
     }
   }
 }
@@ -361,6 +451,12 @@
   padding: 100px 0;
   text-align: center;
   background-color: $white;
+  @include media (1024px) {
+    padding: 74px 0;
+  }
+  @include media(767px) {
+    padding: 44px 0;
+  }
   .headline {
     margin-bottom: 70px;
   }
@@ -378,15 +474,23 @@
   justify-content: center;
   align-items: flex-start;
   margin: 0 -58px;
+  @include media(768px) {
+    margin: 0 auto;
+  }
 }
 
 .intell-items {
   text-align: left;
   color: #7f8c8d;
   max-width: 470px;
-  flex: 1 1 470px;
+  flex: 1 1 calc(50% - 116px);
   width: 100%;
   margin: 0 58px 42px;
+  @include media(768px) {
+    flex: 1 1 auto;
+    max-width: 100%;
+    margin: 0 auto 32px;
+  }
 }
 
 .intell-number {
@@ -536,9 +640,18 @@
 .subscribe {
   padding: 100px 0;
   background-color: $white;
+  @include media (1024px) {
+    padding: 74px 0;
+  }
+  @include media(767px) {
+    padding: 44px 0;
+  }
   &__container {
     .headline {
       margin-bottom: 80px;
+      @include media (1024px) {
+        margin-bottom: 62px;
+      }
     }
   }
 }
@@ -553,8 +666,7 @@
 }
 
 .map-list {
-  background-repeat-x: no-repeat;
-  background-repeat-y: repeat;
+  background-repeat: no-repeat repeat;
   background-position: center 10px;
   padding-bottom: 130px;
 }
