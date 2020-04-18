@@ -6,7 +6,7 @@
 		<main class="main-page">
 			//= layout/_header.html
 
-			<div class="hero" style="background-image: url(./img/bg-hero.svg)">
+			<div id="about-project" class="hero" style="background-image: url(./img/bg-hero.svg)">
 				<div class="container">
 					<div class="intro-project wow fadeIn">
 						<h1 class="headline headline--left wow fadeInUp">О проекте</h1>
@@ -65,7 +65,7 @@
 				</div>
 			</section>
 
-			<section class="priority">
+			<section id="priority" class="priority">
 				<div class="container">
 					<h2 class="headline headline--left">Приоритетные направления</h2>
 				</div>
@@ -197,7 +197,7 @@
 				</div>
 			</section>
 
-			<section class="intell-section">
+			<section id="intell-section" class="intell-section">
 				<div class="container">
 					<h2 class="headline headline--dark">Интеллектуальная собственность</h2>
 
@@ -353,7 +353,7 @@
 				</div>
 			</div>
 
-			<div class="map-project" style="background-image: url(./img/bg-map.png)">
+			<div id="map-project" class="map-project" style="background-image: url(./img/bg-map.png)">
 				<div class="container">
 					<div class="headline">Карта проекта</div>
 
@@ -362,8 +362,8 @@
 							<div class="map-date">
 								<small>2011-2017</small>
 							</div>
-							<i class="map-indicator active"></i>
-							<div class="map-title">
+							<i class="map-indicator"></i>
+							<div class="map-title wow bounceInRight" data-wow-delay="0.3s">
 								<p>НИОКР Проектов</p>
 							</div>
 						</li>
@@ -372,8 +372,8 @@
 							<div class="map-date">
 								<small></small>
 							</div>
-							<i class="map-indicator active"></i>
-							<div class="map-title">
+							<i class="map-indicator"></i>
+							<div class="map-title wow bounceInLeft" data-wow-delay="0.3s">
 								<p>Подготовка  к pre-ICO NATIF</p>
 							</div>
 						</li>
@@ -383,7 +383,7 @@
 								<small>12.2017</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInRight" data-wow-delay="0.3s">
 								<p>Pre-ICO NATIF</p>
 							</div>
 						</li>
@@ -393,7 +393,7 @@
 								<small>01.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInLeft" data-wow-delay="0.3s">
 								<p>Организация и начало работы NATIF</p>
 							</div>
 						</li>
@@ -403,7 +403,7 @@
 								<small>02.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInRight" data-wow-delay="0.3s">
 								<p>Подготовка к ICO NATIF</p>
 							</div>
 						</li>
@@ -413,7 +413,7 @@
 								<small>03.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInLeft" data-wow-delay="0.3s">
 								<p>ICO NATIF</p>
 							</div>
 						</li>
@@ -423,7 +423,7 @@
 								<small>04.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInRight" data-wow-delay="0.3s">
 								<p>Подготовка к проведению ICO проектов NATIF</p>
 							</div>
 						</li>
@@ -435,7 +435,7 @@
 								<small>07.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInLeft" data-wow-delay="0.3s">
 								<p>ICO NHS</p>
 								<p>ICO CCAT</p>
 								<p>ICO Engine</p>
@@ -447,7 +447,7 @@
 								<small>09.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInRight" data-wow-delay="0.3s">
 								<p>Подготовка к следующему пакету проектов ICO NATIF</p>
 							</div>
 						</li>
@@ -459,7 +459,7 @@
 								<small>12.2018</small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInLeft" data-wow-delay="0.3s">
 								<p>ICO Oil</p>
 								<p>ICO Ozon</p>
 								<p>ICO Medicine</p>
@@ -471,7 +471,7 @@
 								<small></small>
 							</div>
 							<i class="map-indicator"></i>
-							<div class="map-title">
+							<div class="map-title wow bounceInRight" data-wow-delay="0.3s">
 								<p>Go forward…</p>
 							</div>
 						</li>
@@ -480,7 +480,7 @@
 				</div>
 			</div>
 
-			<div class="details">
+			<div id="details-ico" class="details">
 				<div class="container">
 					<div class="headline headline--dark headline--left">Детали  ICO</div>
 					
@@ -493,8 +493,6 @@
 						<div class="details-diagram">
 							
 							<div class="my-progress-bar"></div>
-	
-
 
 						</div>
 						<div class="details-layout">
@@ -503,29 +501,29 @@
 								<div class="chart-row">
 									<div class="chart-descr">​Регистрация и открытие NATIF</div>
 									<div class="chart-layout chart-layout--id1">
-										<strong class="chart-percent">70%</strong>
-										<div class="chart-control"></div>
+										<strong class="chart-percent">0%</strong>
+										<div class="chart-control" data-percent="70"></div>
 									</div>
 								</div>
 								<div class="chart-row">
 									<div class="chart-descr">​​Подготовка к проведение ICO NATIF</div>
 									<div class="chart-layout chart-layout--id2">
-										<strong class="chart-percent">13%</strong>
-										<div class="chart-control"></div>
+										<strong class="chart-percent">0%</strong>
+										<div class="chart-control" data-percent="13"></div>
 									</div>
 								</div>
 								<div class="chart-row">
 									<div class="chart-descr">​​Маркетинговые расходы</div>
 									<div class="chart-layout chart-layout--id3">
-										<strong class="chart-percent">10%</strong>
-										<div class="chart-control"></div>
+										<strong class="chart-percent">0%</strong>
+										<div class="chart-control" data-percent="10"></div>
 									</div>
 								</div>
 								<div class="chart-row">
 									<div class="chart-descr">​​Административные расходы</div>
 									<div class="chart-layout chart-layout--id4">
-										<strong class="chart-percent">7%</strong>
-										<div class="chart-control"></div>
+										<strong class="chart-percent">0%</strong>
+										<div class="chart-control" data-percent="7"></div>
 									</div>
 								</div>
 							</div>
@@ -540,16 +538,16 @@
 					<div class="headline">Финансовая модель</div>
 
 					<div class="model-wrap">
-						<div class="model-logo">
+						<div class="model-logo wow fadeInDown" data-wow-delay="0.2s">
 							<img src="./img/natif-model.svg" alt="logo" width="159" height="33">
 						</div>
 
-						<div class="model-row model-row--id-1">
+						<div class="model-row model-row--id-1 wow fadeInDown" data-wow-delay="0.2s">
 							<svg class="line line--id-1" width="2" height="112" viewBox="0 0 2 112" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 1V101" stroke="#00E3F1" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 10"/>
 							</svg>
 							<div class="model-inner">
-								<div class="model-part">
+								<div class="model-part wow fadeInUp" data-wow-delay="0.5s">
 									<p>For participants preICO NATIF after ICO NATIF 1 NTF = preNTF*4</p>
 								</div>
 								<div class="model-rect model-rect--lg">
@@ -557,7 +555,7 @@
 									<div class="model-step">01</div>
 									<p>PreICO for preparation of ICO NASER.Fund</p>
 								</div>
-								<div class="model-token">
+								<div class="model-token wow fadeInRight" data-wow-delay="0.6s">
 									<div class="model-token__inner">
 										<p>Ether Token</p>
 									</div>
@@ -573,8 +571,7 @@
 							</div>
 						</div>
 
-
-						<div class="model-row model-row--id-2">
+						<div class="model-row model-row--id-2 wow fadeInDown" data-wow-delay="0.2s">
 							<svg class="line line--id-1" width="2" height="156" viewBox="0 0 2 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 1.79199V155" stroke="#00E3F1" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 10"/>
 							</svg>
@@ -584,7 +581,7 @@
 									<div class="model-step">02</div>
 									<p>NATIF</p>
 								</div>
-								<div class="model-token model-token--md">
+								<div class="model-token model-token--md wow fadeInRight" data-wow-delay="0.6s">
 									<div class="model-layout model-layout--fork">
 										<div class="model-layout__inner">
 											<p>Formation</p>
@@ -600,13 +597,12 @@
 							</div>
 						</div>
 
-
-						<div class="model-row model-row--id-3">
+						<div class="model-row model-row--id-3 wow fadeInDown" data-wow-delay="0.2s">
 							<svg class="line line--id-2" width="2" height="156" viewBox="0 0 2 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 1.79199V155" stroke="#00E3F1" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 10"/>
 							</svg>
 							<div class="model-inner">
-								<div class="model-part">
+								<div class="model-part wow fadeInUp" data-wow-delay="0.5s">
 									<p>For participants ICO NATIF after first ICO Project 1 NTF = NTF*2</p>
 								</div>
 								<div class="model-rect model-rect--sm model-rect--mr">
@@ -614,7 +610,7 @@
 									<div class="model-step">03</div>
 									<p>ICO NATIF</p>
 								</div>
-								<div class="model-token">
+								<div class="model-token wow fadeInRight" data-wow-delay="0.6s">
 									<div class="model-token__inner">
 										<p>Ether Token</p>
 									</div>
@@ -630,9 +626,7 @@
 							</div>
 						</div>
 
-
-
-						<div class="model-row model-row--id-4">
+						<div class="model-row model-row--id-4 wow fadeInDown" data-wow-delay="0.2s">
 							<svg class="line line--id-3" width="2" height="156" viewBox="0 0 2 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1 1.79199V155" stroke="#00E3F1" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 10"/>
 							</svg>
@@ -642,7 +636,7 @@
 									<div class="model-step">04</div>
 									<p>Activity of the NATIF</p>
 								</div>
-								<div class="model-token model-token--md">
+								<div class="model-token model-token--md wow fadeInRight" data-wow-delay="0.6s">
 									<div class="model-layout model-layout--id-1 model-layout--fork">
 										<div class="model-layout__inner model-layout__inner--id-1">
 											<p>ICO Project 1 • NTF <span>( ETH exchange )</span></p>
@@ -668,7 +662,7 @@
 			
 			<div class="stages">
 				<div class="container">
-					<div class="stages-holder">
+					<div class="stages-holder wow fadeInUp" data-wow-delay="0.2s">
 						<div class="stages-step">Стадия 1</div>
 						<div class="stages-descr">
 							<div class="stages-head">PreICO NATIF</div>
@@ -676,7 +670,7 @@
 						</div>
 					</div>
 
-					<div class="stages-holder">
+					<div class="stages-holder wow fadeInUp" data-wow-delay="0.2s">
 						<div class="stages-step">Стадия 2</div>
 						<div class="stages-descr">
 							<div class="stages-head">ICO NATIF </div>
@@ -686,7 +680,7 @@
 						</div>
 					</div>
 
-					<div class="stages-holder">
+					<div class="stages-holder wow fadeInUp" data-wow-delay="0.2s">
 						<div class="stages-step">Стадия «Проект»</div>
 						<div class="stages-descr">
 							<div class="stages-head">ICO NATIF Projects</div>
@@ -731,7 +725,7 @@
 				</div>
 			</div>
 				
-			<div class="team">
+			<div id="team" class="team">
 				<div class="container">
 					<div class="headline headline--dark">Команда</div>
 

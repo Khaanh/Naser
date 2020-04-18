@@ -54,6 +54,7 @@
 .explanation {
   position: relative;
   padding-bottom: 100px;
+  background-color: $white;
 }
 
 .expl-info {
@@ -193,6 +194,7 @@
 .fund-section {
   position: relative;
   padding-top: 210px;
+  background-color: $white;
 }
 
 .foundation {
@@ -358,6 +360,7 @@
 .intell-section {
   padding: 100px 0;
   text-align: center;
+  background-color: $white;
   .headline {
     margin-bottom: 70px;
   }
@@ -532,6 +535,7 @@
 
 .subscribe {
   padding: 100px 0;
+  background-color: $white;
   &__container {
     .headline {
       margin-bottom: 80px;
@@ -633,6 +637,7 @@
 .details {
   padding: 100px 0 274px;
   position: relative;
+  background-color: $white;
   .headline {
     margin-bottom: 70px;
   }
@@ -1084,11 +1089,13 @@
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: $main;
-    box-shadow: 0 0px 10px rgba(0, 227, 241, 0.501387);
+    background-color: transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     position: absolute;
+    opacity: 0.8;
     bottom: -15px;
     left: 0;
+    @include transition;
   }
   &:before {
     content: '';
@@ -1099,6 +1106,13 @@
     position: absolute;
     bottom: -136px;
     left: 5px;
+  }
+  &.active {
+    opacity: 1;
+    &:after {
+      background-color: $main;
+      box-shadow: 0 0 20px rgba(0, 227, 241, 0.501387);
+    }
   }
 }
 
@@ -1167,15 +1181,19 @@
   padding: 12px;
   text-decoration: none;
   background-color: transparent;
+  box-shadow: 0 0 0;
   @include transition;
+  &.active {
+    box-shadow: 0 0 25px rgba(0, 227, 241, 0.501387);
+  }
   @include hover () {
-    background-color: $main;
-    color: $white;
+    box-shadow: 0 0px 20px rgba(0, 227, 241, 0.501387);
   }
 }
 
 .team {
   padding: 100px 0 227px;
+  background-color: $white;
   .headline {
     margin-bottom: 120px;
   }
