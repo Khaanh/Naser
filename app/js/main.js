@@ -44,8 +44,32 @@ $(function() {
     })
   }
 
+  function progressLine() {
+    $('.chart-control').each(function() {
+      let $control = $(this).data('percent'),
+          $percent = $(this).prev(),
+          $this = $(this),
+          counter = 0,
+          id = setInterval(fillLine, 10);
+
+      function fillLine() {
+        if ( $control > counter) {
+          counter++;
+          $percent.text(`${counter}` + '%')
+          $this.addClass('active')
+        } else {
+          clearInterval(id)
+        }
+      }
+    })
+  }
+
   const windowHeight = $(window).height();
   $(document).on('scroll', function() {
+    let height = $('.chart-control').offset().top + $('.chart-control').height() + 115;
+    if ($(document).scrollTop() + windowHeight >= height) {
+      progressLine();
+    }
     btnLightn();
     stageLight();
     mapLight();
