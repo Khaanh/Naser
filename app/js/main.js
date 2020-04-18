@@ -2,7 +2,6 @@ $(function() {
 	//= include/default
 	//= include/popup
   //= include/animation
-  //= include/progressbar
 
   $('.js-form-registr').on('focus', function() {
     $(this).parent().addClass('active')
@@ -90,6 +89,14 @@ $(function() {
   $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
   })
+
+  // Mobile menu
+  $('.js-burger').on('click', function() {
+    $(this).toggleClass('active');
+    $('html').toggleClass('o-hidden');
+    $('.header-wrap').toggleClass('open-menu');
+  })
+
 
 });
 
