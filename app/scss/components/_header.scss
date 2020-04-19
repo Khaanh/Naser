@@ -291,6 +291,10 @@
   @include media(1024px) {
     display: block;
   }
+  @include media(768px) {
+    width: 35px;
+    height: 35px;
+  }
   &__holder {
     display: flex;
     align-items: center;

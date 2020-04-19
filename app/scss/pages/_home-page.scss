@@ -726,6 +726,12 @@
   background-color: $steel;
   background-attachment: fixed;
   padding: 100px 0 0;
+  @include media (1024px) {
+    padding: 74px 0 0;
+  }
+  @include media(768px) {
+    padding: 44px 0 0;
+  }
   .headline {
     margin-bottom: 100px;
   }
@@ -735,6 +741,11 @@
   background-repeat: no-repeat repeat;
   background-position: center 10px;
   padding-bottom: 130px;
+  @include media(479px) {
+    background-position: left top;
+    margin-left: 15px;
+    padding-bottom: 74px;
+  }
 }
 
 .map-items {
@@ -743,10 +754,21 @@
   align-items: flex-start;
   margin-bottom: 110px;
   flex-direction: row;
+  @include media(479px) {
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 68px;
+  }
   &:nth-child(even) {
     flex-direction: row-reverse;
+    @include media(479px) {
+      flex-direction: column;
+    }
     .map-title {
       text-align: right;
+      @include media(479px) {
+        text-align: left;
+      }
     }
     .map-date {
       text-align: left;
@@ -765,26 +787,21 @@
   display: block;
   width: 12px;
   height: 12px;
+  flex: 0 0 12px;
   border-radius: 50%;
   border: 1px solid $main;
   background-color: $steel;
   box-shadow: 0 0 0;
   margin-top: 6px;
   @include transition;
+  @include media(479px) {
+    position: absolute;
+    margin: 0 0 0 -5px;
+  }
   &.active {
     box-shadow: 0px 0px 10px rgba(0, 227, 241, 0.501387);
     background-color: $main;
   }
-  // &:after {
-  //   content: '';
-  //   display: block;
-  //   border-top: 2px dashed #0a3a48;
-  //   position: absolute;
-  //   width: 100%;
-  //   transform: rotate(90deg);
-  //   top: 0;
-  //   left: 1px;
-  // }
 }
 
 .map-date {
@@ -794,8 +811,58 @@
   max-width: 238px;
   width: 100%;
   text-align: right;
+  @include media(479px) {
+    text-align: left;
+    max-width: 100%;
+  }
   small {
     display: block;
+    position: relative;
+    &:first-child,
+    &:last-child {
+      @include media(479px) {
+        &:after,
+        &:before {
+          display: none;
+        }
+      }
+    }
+    @include media(479px) {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &:after {
+      content: '';
+      display: none;
+      height: 14px;
+      width: 1px;
+      background-color: $txt;
+      position: absolute;
+      right: -4px;
+      top: 50%;
+      transform: translate(0, -50%);
+      @include media(479px) {
+        display: block;
+      }
+    }
+    &:before {
+      content: '';
+      display: none;
+      height: 14px;
+      width: 1px;
+      background-color: $txt;
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      transform: translate(0, -50%);
+      @include media(479px) {
+        display: block;
+      }
+    }
+    &:empty {
+      display: none;
+    }
   }
 }
 
@@ -807,6 +874,9 @@
   max-width: 238px;
   width: 100%;
   text-align: left;
+  @include media(479px) {
+    max-width: 100%;
+  }
   p {
     margin: 0;
   }
@@ -844,6 +914,12 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  @include media(1200px) {
+    padding: 38px 30px 38px 40px;
+  }
+  @include media(768px) {
+    padding: 38px 10px;
+  }
 }
 
 .details-diagram {
@@ -855,6 +931,42 @@
   justify-content: center;
   position: relative;
   margin-right: 114px;
+  @include media(1200px) {
+    margin-right: 54px;
+  }
+  @include media (1024px) {
+    display: none;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fill {
+  transition: 1s ease-in-out;
+  &--lg {
+    &.active {
+      fill: #171721;
+    }
+  }
+  &--md {
+    &.active {
+      fill: #0f5b66;
+    }
+  }
+  &--sm {
+    &.active {
+      fill: #089fac;
+    }
+  }
+  &--xs {
+    &.active {
+      fill: #00e3f1;
+    }
+  }
 }
 
 
@@ -873,6 +985,11 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 25px;
+  @include media(768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -883,12 +1000,18 @@
   width: 100%;
   flex: 0 0 275px;
   margin-right: 12px;
+  @include media(768px) {
+    max-width: 100%;
+    flex: 1 1 auto;
+    margin: 0 0 12px;
+  }
 }
 
 .chart-layout {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   &--id1 {
     .chart-percent {
       color: $main;
@@ -968,6 +1091,10 @@
     height: 100%;
     border-radius: 50px;
     transition: width 0.7s ease-in-out;
+  }
+  @include media(1024px) {
+    max-width: 100%;
+    flex: 1 1 auto;
   }
 }
 
