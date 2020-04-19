@@ -63,6 +63,16 @@ $(function() {
     })
   }
 
+  function progressCircle() {
+    let $this = $('.details-diagram'),
+    height = $this.offset().top + $this.height() + 115;
+    if ($(document).scrollTop() + windowHeight >= height) {
+      $('.fill').each(function() {
+        $(this).addClass('active')
+      })
+    }
+  }
+
   const windowHeight = $(window).height();
   $(document).on('scroll', function() {
     let height = $('.chart-control').offset().top + $('.chart-control').height() + 115;
@@ -72,6 +82,7 @@ $(function() {
     btnLightn();
     stageLight();
     mapLight();
+    progressCircle();
   });
 
   // Following Scroll

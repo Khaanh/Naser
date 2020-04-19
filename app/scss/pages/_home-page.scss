@@ -914,6 +914,12 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  @include media(1200px) {
+    padding: 38px 30px 38px 40px;
+  }
+  @include media(768px) {
+    padding: 38px 10px;
+  }
 }
 
 .details-diagram {
@@ -925,6 +931,42 @@
   justify-content: center;
   position: relative;
   margin-right: 114px;
+  @include media(1200px) {
+    margin-right: 54px;
+  }
+  @include media (1024px) {
+    display: none;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fill {
+  transition: 1s ease-in-out;
+  &--lg {
+    &.active {
+      fill: #171721;
+    }
+  }
+  &--md {
+    &.active {
+      fill: #0f5b66;
+    }
+  }
+  &--sm {
+    &.active {
+      fill: #089fac;
+    }
+  }
+  &--xs {
+    &.active {
+      fill: #00e3f1;
+    }
+  }
 }
 
 
@@ -943,6 +985,11 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 25px;
+  @include media(768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -953,12 +1000,18 @@
   width: 100%;
   flex: 0 0 275px;
   margin-right: 12px;
+  @include media(768px) {
+    max-width: 100%;
+    flex: 1 1 auto;
+    margin: 0 0 12px;
+  }
 }
 
 .chart-layout {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   &--id1 {
     .chart-percent {
       color: $main;
@@ -1038,6 +1091,10 @@
     height: 100%;
     border-radius: 50px;
     transition: width 0.7s ease-in-out;
+  }
+  @include media(1024px) {
+    max-width: 100%;
+    flex: 1 1 auto;
   }
 }
 
