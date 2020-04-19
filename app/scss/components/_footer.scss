@@ -2,8 +2,8 @@
   background-color: $cinder;
   padding-top: 277px;
   position: relative;
-  .container {
-  
+  @include media(479px) {
+    padding-top: 350px;
   }
 }
 
@@ -24,14 +24,18 @@
 
 .soc-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 66px;
+  @include media(479px) {
+    margin-bottom: 46px;
+  }
 }
 
 .soc-items {
   text-align: center;
-  margin: 0 24px;
+  margin: 0 24px 18px;
   color: $black;
   p {
     margin: 0;
@@ -118,6 +122,10 @@
   margin: 0 auto 70px;
   color: $main;
   text-decoration: none;
+  @include media(479px) {
+    height: auto;
+    margin: 0 auto 100px;
+  }
   &:hover {
     span {
       &:before {
@@ -131,6 +139,9 @@
   span {
     position: relative;
     display: inline-block;
+    @include media(479px) {
+      margin-left: -45px;
+    }
     &:before {
       content: '';
       display: block;
@@ -165,10 +176,16 @@
 .footer-bottom {
   background-color: $steel;
   padding: 38px 0;
+  @include media (479px) {
+    background-color: $cinder;
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @include media (479px) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -180,6 +197,10 @@
   max-width: 660px;
   width: 100%;
   margin-right: auto;
+  padding-right: 24px;
+  @include media (479px) {
+    padding: 0;
+  }
   small {
     font-size: 12px;
     line-height: 13px;
@@ -192,6 +213,14 @@
   flex-direction: column;
   align-items: flex-end;
   padding-top: 16px;
+  @include media(479px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0;
+  }
 }
 
 .footer-suports {
@@ -202,6 +231,9 @@
   display: inline-block;
   position: relative;
   margin-bottom: 28px;
+  @include media(479px) {
+    margin-bottom: 0;
+  }
   &:last-child {
     margin: 0;
   }

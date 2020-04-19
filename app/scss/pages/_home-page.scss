@@ -324,11 +324,20 @@
 }
 
 .about-fund {
+  @include media(1024px) {
+    padding: 0 10px;
+  }
   &__head {
     max-width: 900px;
     width: 100%;
     margin: 0 auto 80px;
     text-align: center;
+    @include media(1024px) {
+      margin: 0 auto 64px;
+    }
+    @include media(768px) {
+      margin: 0 auto 44px;
+    }
     .headline {
       margin-bottom: 50px;
     }
@@ -340,6 +349,12 @@
   line-height: 25px;
   text-align: center;
   margin-bottom: 105px;
+  @include media(1024px) {
+    margin-bottom: 74px;
+  }
+  @include media(768px) {
+    margin-bottom: 54px;
+  }
 }
 
 .about-holder {
@@ -347,10 +362,13 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  @include media(1024px) {
+    flex-direction: column;
+  }
 }
 
 .about-invest {
-  max-width: 270px;
+  max-width: 260px;
   width: 100%;
   border-radius: 50px;
   background-color: $main;
@@ -362,10 +380,27 @@
   align-items: center;
   justify-content: center;
   padding: 23px 16px;
+  @include media(1024px) {
+    margin-bottom: 55px;
+    &.fadeInLeft {
+      display: none;
+    }
+    &.bounceInDown {
+      display: block;
+    }
+  }
 }
 
 .about-direct {
   margin-right: 6px;
+  @include media (1024px) {
+    margin: 0 0 55px;
+  }
+  svg {
+    @include media(1024px) {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .about-natif {
@@ -377,12 +412,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include media(1024px) {
+    height: 224px;
+    width: 224px;
+    flex: 1 1 224px;
+  }
 }
 
-.about-svg-group {}
+.about-svg-group {
+  @include media(1024px) {
+    margin: 55px 0;
+  }
+}
 
 .about-st-group {
   position: relative;
+}
+
+.svg-gr-1,
+.svg-gr-2,
+.svg-gr-3 {
+  display: inline-block;
+  @include media(1024px) {
+    transform: rotate(90deg);
+  }
 }
 
 .circle {
@@ -454,7 +507,7 @@
   @include media (1024px) {
     padding: 74px 0;
   }
-  @include media(767px) {
+  @include media(768px) {
     padding: 44px 0;
   }
   .headline {
@@ -527,6 +580,12 @@
 .project-invest {
   background-color: $cinder;
   padding: 100px 0 90px;
+  @include media (1024px) {
+    padding: 74px 0;
+  }
+  @include media(768px) {
+    padding: 44px 0;
+  }
   .headline {
     margin: 0 0 80px;
   }
@@ -537,7 +596,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 80px;
+  margin: 0 -10px 80px;
+  @include media (768px) {
+    margin: 0 -5px 60px;
+  }
   &__items {
     background-color: $steel;
     border-radius: 5px;
@@ -548,9 +610,13 @@
     color: #7f8c8d;
     max-width: 267px;
     width: 100%;
-    flex: 0 0 calc(25% - 20px);
+    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 auto;
     height: 77px;
     margin: 0 10px 20px;
+    @include media (768px) {
+      margin: 0 5px 10px;
+    }
     p {
       margin: 0;
     }
@@ -643,7 +709,7 @@
   @include media (1024px) {
     padding: 74px 0;
   }
-  @include media(767px) {
+  @include media(768px) {
     padding: 44px 0;
   }
   &__container {
@@ -1162,8 +1228,17 @@
 .stages {
   padding: 100px 0;
   background-color: $steel;
+  @include media (1024px) {
+    padding: 74px 0;
+  }
+  @include media(768px) {
+    padding: 44px 0;
+  }
   .container {
     margin-left: 200px;
+    @include media(1200px) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -1171,6 +1246,10 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: 174px;
+  @include media(768px) {
+    flex-direction: column;
+    margin-bottom: 146px;
+  }
   &:last-child {
     margin-bottom: 0;
     .stages-descr {
@@ -1188,6 +1267,10 @@
   color: $main;
   margin-right: 70px;
   flex: 0 0 172px;
+  @include media(768px) {
+    flex: 1 1 auto;
+    margin: 0 0 24px;
+  }
 }
 
 .stages-descr {
@@ -1240,10 +1323,19 @@
   background-color: $cinder;
   background-attachment: fixed;
   padding: 100px 0 60px;
+  @include media (1024px) {
+    padding: 74px 0;
+  }
+  @include media(768px) {
+    padding: 44px 0;
+  }
 }
 
 .info-list {
   margin-bottom: 48px;
+  @include media(768px) {
+    margin: 0 -10px 48px;
+  }
 }
 
 .info-items {
@@ -1253,6 +1345,9 @@
   width: 100%;
   padding: 40px 76px;
   margin-bottom: 10px;
+  @include media (768px) {
+    padding: 30px 10px;
+  }
 }
 
 .info-head {
@@ -1306,6 +1401,15 @@
 .team {
   padding: 100px 0 227px;
   background-color: $white;
+  @include media (1024px) {
+    padding: 74px 0 220px;
+  }
+  @include media(768px) {
+    padding: 44px 0 220px;
+  }
+  @include media(479px) {
+    padding: 44px 0 320px;
+  }
   .headline {
     margin-bottom: 120px;
   }
@@ -1323,7 +1427,7 @@
 .members-items {
   max-width: 265px;
   width: 100%;
-  flex: 0 0 25%;
+  flex: 1 1 auto;
   margin: 0 11px 88px;
   background: $white;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
@@ -1340,6 +1444,9 @@
       @include hide-elem;
     }
   }
+  @include media (479px) {
+    margin: 0 11px 60px;
+  }
 }
 
 .members-inner {}
@@ -1348,6 +1455,9 @@
   padding: 55px 20px 14px;
   position: relative;
   height: 155px;
+  @include media(479px) {
+    height: auto;
+  }
 }
 
 .members-widget {
