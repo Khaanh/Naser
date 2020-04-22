@@ -361,3 +361,13 @@
 .o-hidden {
   overflow: hidden;
 }
+
+// Preload styles
+text{
+  position:absolute;
+  font-family: "Ubuntu", OpenSans, sans-serif;
+  fill:#ededed;
+  font-size:36px;
+  text-anchor:middle;
+  font-weight:700;
+}

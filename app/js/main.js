@@ -4,6 +4,8 @@ $(function() {
   //= include/animation
   //= include/mobile-header
   //= include/form
+  //= include/preload
+
 });
 
 
