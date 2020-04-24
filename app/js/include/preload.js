@@ -231,4 +231,3 @@ tl.to(outline, 4, {
 }, '-=0.5');
 
 // TweenMax.globalTimeScale(0.5)
-gsap.registerPlugin(MotionPathPlugin, TextPlugin);
